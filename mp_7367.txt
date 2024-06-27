@@ -1,0 +1,164 @@
+# ----- Level mp_7367 ---------------------------
+# Designer: Muhammad Assad, June 26th, 2024
+# Goals: Rust + Troll + Lantern
+# Spells Used: Inflamare + Inflatus
+# Target Difficulty: Medium
+
+win=sludge
+win=bigjumpersb 1
+win=collect
+
+lose=moves 22
+
+# ----- Star/Points Targets ----------------
+
+star=1000		
+star=5000		
+star=115000
+
+# ----- Gameboard Items --------------------
+
+new=rbgyvws
+
+color.r=Red
+color.b=Blue
+color.g=Green
+color.y=Yellow
+color.v=Violet
+color.w=White
+color.s=Blocker|blocker|true
+
+weights=16 16 16 16 16 20 0
+
+blocker_weights=50 50 0
+
+# ----- The Gameboard ----------------------
+
+row=.RRR.RwR.
+row=RRRRRRwRR
+row=RRRRRRRwR
+row=.RRRRRRR.
+row=RRRRRRRRR
+row=.RRRRRRR.
+row=RRRRRRRRR
+row=RRRRRRRRR
+row=.RRR.RRR.
+
+sludge=.x.....x.
+sludge=xx.....xx
+sludge=.........
+sludge=.........
+sludge=.........
+sludge=.........
+sludge=.........
+sludge=xx.....xx
+sludge=.x.....x.
+
+bigjumpers=.........
+bigjumpers=.........
+bigjumpers=.........
+bigjumpers=...<<<...
+bigjumpers=...<<<...
+bigjumpers=...<<<...
+bigjumpers=.........
+bigjumpers=.........
+bigjumpers=.........
+
+bigjumper_type=diagonal 
+bigjumper_spawn=1,1,1
+bigjumper_max=1
+bigjumper_life=5
+bigjumper_respawn=true 
+
+blockers=.........
+blockers=...2.2...
+blockers=.........
+blockers=.........
+blockers=2.......2
+blockers=..2...2..
+blockers=.........
+blockers=...2.2...
+blockers=.........
+
+boost=.........
+boost=.........
+boost=....1....
+boost=..1...1..
+boost=.........
+boost=.........
+boost=.1.....1.
+boost=....1....
+boost=.........
+
+# ----- Collectable Items --------------------
+
+target.blockers.className=blocker
+target.blockers.color=s
+target.blockers.goal=8
+target.blockers.min=8
+target.blockers.max=8
+target.blockers.percent=100
+target.blockers.levelWeights=50 50
+target.blockers.sprite=Blocker
+target.blockers.type=flyto
+target.blockers.rotateOnFlyTo=false
+target.blockers.flyToUI=CollectorMaster3
+target.blockers.dropColumnFilter=11.....11
+
+# ----- Spell Rules ----------------------
+
+target.spell.color=w
+target.spell.isWinCondition=false
+target.spell.type=flyto
+target.spell.flyToUI=FlyToSpellMeter
+target.spell.refillAmount=12
+
+SpellLumosLantern.enabled=true
+SpellLumosLantern.castLimit=3
+SpellLumosLantern.spawnCount=5
+
+SpellInflatus.enabled=true
+SpellInflatus.numTargets=5
+SpellInflatus.castLimit=2
+SpellInflatus.castColor=r,v
+
+# ------- Special Rules ------------
+
+rack_intro=type 1 duration 0.3 delay 0.01
+rack_outro=type 1 duration 0.3 delay 0.01
+
+bg_color=255 255 255 255
+bg_style=alt17
+#bg_style=alt33 #mud
+
+#hardLevel=true
+
+music=
+musicIsSequential=
+music_delay=
+
+square_match=true
+two_by_two_splitter=true
+
+bonus=6 deleter
+bonus=11 deleter
+bonus=15 deleter
+bonus=19 deleter
+
+# ----- Power Ups --------------------------
+
+preLevelPowerup=powerup_one_splitter
+preLevelPowerup=powerup_1bubble
+preLevelPowerup=powerup_1seeker
+
+inLevelPowerup=powerup_shovel
+inLevelPowerup=powerup_basket
+inLevelPowerup=powerup_rowclear
+inLevelPowerup=powerup_columnclear
+
+# ----- Secondary Cascade Commands ---------
+
+explosiveness=5
+
+cpu_assistance=off
+

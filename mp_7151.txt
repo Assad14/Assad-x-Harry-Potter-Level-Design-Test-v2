@@ -1,0 +1,163 @@
+# ----- Level mp_7151 ---------------------------
+# Designer: Muhammad Assad, June 26th, 2024
+# Goals: Candles + Mandrakes + Leaves
+# Spells Used: Accio Chatterung Teeth + Tergeo
+# Target Difficulty: Easy
+
+win=mud
+win=mandrake 2
+win=collect
+
+lose=moves 25
+
+# ----- Star/Points Targets ----------------
+
+star=1000		
+star=5000		
+star=115000
+
+# ----- Gameboard Items --------------------
+
+new=rbgyvwc
+
+color.r=Red
+color.b=Blue
+color.g=Green
+color.y=Yellow
+color.v=Violet
+color.w=White
+color.c=deadCandle|candle|true
+
+weights=16 16 16 16 16 20 0
+
+# ----- The Gameboard ----------------------
+
+row=Rg.R.R.bR
+row=gRgwRwbRb
+row=RRRRwRRRR
+row=gRRRRRRRb
+row=gRRRRRRRb
+row=RRRRRRRRR
+row=.RRRRRRR.
+row=..RRRRR..
+row=..RRRRR..
+
+boost=.........
+boost=....1....
+boost=..1...1..
+boost=.........
+boost=....1....
+boost=.1.....1.
+boost=.........
+boost=.........
+boost=.........
+
+mud=.2.....2.
+mud=12.....21
+mud=2.......2
+mud=1..2.2..1
+mud=2.2...2.2
+mud=.21.2.12.
+mud=.........
+mud=.........
+mud=.........
+
+mudVariant=leaves
+
+candle=2.......2
+candle=.........
+candle=.........
+candle=....2....
+candle=.........
+candle=1..1.1..1
+candle=.........
+candle=.........
+candle=.........
+
+mandrake=.........
+mandrake=.........
+mandrake=.........
+mandrake=.........
+mandrake=.........
+mandrake=.........
+mandrake=.1233321.
+mandrake=..55155..
+mandrake=..55155..
+
+SpellTergeo.spots=.........
+SpellTergeo.spots=.........
+SpellTergeo.spots=.1.....6.
+SpellTergeo.spots=.24...57.
+SpellTergeo.spots=.3.....8.
+SpellTergeo.spots=.........
+SpellTergeo.spots=.........
+SpellTergeo.spots=.........
+SpellTergeo.spots=.........
+
+# ----- Collectable Items --------------------
+
+target.deadCandle.color=c
+target.deadCandle.goal=7
+target.deadCandle.type=flyto
+target.deadCandle.min=7
+target.deadCandle.max=7
+target.deadCandle.percent=100
+target.deadCandle.levelWeights=0 100
+target.deadCandle.rotateOnFlyTo=false
+target.deadCandle.flyToUI=CollectorMaster2
+target.deadCandle.dropColumnFilter=111111111
+
+# ----- Spell Rules ----------------------
+
+target.spell.color=w
+target.spell.isWinCondition=false
+target.spell.type=flyto
+target.spell.flyToUI=FlyToSpellMeter
+target.spell.refillAmount=7
+
+SpellAccioChatteringTeeth.enabled=true
+SpellAccioChatteringTeeth.numPieces=4
+SpellAccioChatteringTeeth.castLimit=1
+
+SpellTergeo.enabled=true
+
+# ------- Special Rules ------------
+
+rack_intro=type 1 duration 0.3 delay 0.01
+rack_outro=type 1 duration 0.3 delay 0.01
+
+bg_color=255 255 255 255
+bg_style=alt33
+#bg_style=alt33 #mud
+
+#hardLevel=true
+
+music=
+musicIsSequential=
+music_delay=
+
+square_match=true
+two_by_two_splitter=true
+
+bonus=6 deleter
+bonus=11 deleter
+bonus=15 deleter
+bonus=19 deleter
+
+# ----- Power Ups --------------------------
+
+preLevelPowerup=powerup_one_splitter
+preLevelPowerup=powerup_1bubble
+preLevelPowerup=powerup_1seeker
+
+inLevelPowerup=powerup_shovel
+inLevelPowerup=powerup_basket
+inLevelPowerup=powerup_rowclear
+inLevelPowerup=powerup_columnclear
+
+# ----- Secondary Cascade Commands ---------
+
+explosiveness=5
+
+cpu_assistance=off
+

@@ -1,0 +1,136 @@
+# ----- Level mp_7057 ---------------------------
+# Designer: Muhammad Assad, June 26th, 2024
+# Goals: Bubbling Brew + Dishes + Ministry Tiles
+# Target Difficulty: Medium
+
+win=BubblingBrew 15
+win=Dishes 10
+win=MinistryTile 10
+
+lose=moves 22
+
+# ----- Star/Points Targets ----------------
+
+star=1000		
+star=5000		
+star=115000
+
+# ----- Gameboard Items --------------------
+
+new=rbgyv
+
+color.r=Red
+color.b=Blue
+color.g=Green
+color.y=Yellow
+color.v=Violet
+
+weights=20 20 20 20 20
+
+# ----- The Gameboard ----------------------
+
+row=R.R.R.R.R
+row=gRRRRRRRb
+row=ygRRRRRbg
+row=gyRRRRRgb
+row=yRRRRRRRg
+row=RRRRRRRRR
+row=bRRRRRRRv
+row=bRRR.RRRv
+row=RbRR.RRvR
+
+boost=.........
+boost=....1....
+boost=.........
+boost=.1.....1.
+boost=....1....
+boost=.........
+boost=.........
+boost=.1.....1.
+boost=.........
+
+BubblingBrew.bottle=.........
+BubblingBrew.bottle=.1.1.1.1.
+BubblingBrew.bottle=.........
+BubblingBrew.bottle=..1...1..
+BubblingBrew.bottle=.........
+BubblingBrew.bottle=.........
+BubblingBrew.bottle=.........
+BubblingBrew.bottle=.........
+BubblingBrew.bottle=.........
+
+BubblingBrew.bubble=.........
+BubblingBrew.bubble=.........
+BubblingBrew.bubble=.........
+BubblingBrew.bubble=.........
+BubblingBrew.bubble=.........
+BubblingBrew.bubble=.........
+BubblingBrew.bubble=.........
+BubblingBrew.bubble=.........
+BubblingBrew.bubble=.........
+
+BubblingBrew.spawnCount=1
+
+dishes=.........
+dishes=.........
+dishes=.........
+dishes=.........
+dishes=.........
+dishes=.11...22.
+dishes=.11...22.
+dishes=.........
+dishes=.........
+
+dishes_height1=5
+dishes_height2=5
+
+ministryTile=3.......3
+ministryTile=.........
+ministryTile=.........
+ministryTile=.........
+ministryTile=.........
+ministryTile=3..3.3..3
+ministryTile=...1.1...
+ministryTile=...3.3...
+ministryTile=.........
+
+# ------- Special Rules ------------
+
+rack_intro=type 1 duration 0.3 delay 0.01
+rack_outro=type 1 duration 0.3 delay 0.01
+
+bg_color=255 255 255 255
+bg_style=alt17
+#bg_style=alt33 #mud
+
+#hardLevel=true
+
+music=
+musicIsSequential=
+music_delay=
+
+square_match=true
+two_by_two_splitter=true
+
+bonus=6 deleter
+bonus=11 deleter
+bonus=15 deleter
+bonus=19 deleter
+
+# ----- Power Ups --------------------------
+
+preLevelPowerup=powerup_one_splitter
+preLevelPowerup=powerup_1bubble
+preLevelPowerup=powerup_1seeker
+
+inLevelPowerup=powerup_shovel
+inLevelPowerup=powerup_basket
+inLevelPowerup=powerup_rowclear
+inLevelPowerup=powerup_columnclear
+
+# ----- Secondary Cascade Commands ---------
+
+explosiveness=5
+
+cpu_assistance=off
+
